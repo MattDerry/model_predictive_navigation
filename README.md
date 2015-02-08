@@ -21,6 +21,7 @@ sudo apt-get install libflann-dev
 
 ## Install and build package
 1) Clone model_predictive_navigation in to a ROS Indigo workspace
+
 2) Catkin make the workspace (planner works best if Release flag is used during build)
 ```
 catkin_make -DCMAKE_BUILD_TYPE=Release
@@ -33,4 +34,5 @@ catkin_make -DCMAKE_BUILD_TYPE=Release
 roslaunch model_predictive_navigation mpepc_turtlebot_nav.launch
 ```
 2) Rviz will automatically open, select "2D Nav Goal" button and place a goal pose in the scene
+
 3) Turtlebot will begin navigating to desire goal pose
