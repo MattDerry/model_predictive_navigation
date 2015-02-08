@@ -22,11 +22,14 @@ sudo apt-get install libflann-dev
 ## Install and build package
 1) Clone model_predictive_navigation in to a ROS Indigo workspace
 
-2) Catkin make the workspace (planner works best if Release flag is used during build)
+2) Build the workspace (planner works best if Release flag is used during build)
 ```
 catkin_make -DCMAKE_BUILD_TYPE=Release
 ```
 3) Source the workspace
+```
+source <workspace_name>/devel/setup.bash
+```
 
 ## To Run
 1) Run the included launch file:
