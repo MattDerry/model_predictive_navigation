@@ -40,3 +40,6 @@ roslaunch model_predictive_navigation mpepc_turtlebot_nav.launch
 2) Rviz will automatically open, select "2D Nav Goal" button and place a goal pose in the scene
 
 3) Turtlebot will begin navigating to desire goal pose
+
+## Notes About Planner
+The planner consists of two nodes `mpepc_trajectory` and `mpepc_plan`.  The goal request goes to `mpepc_trajectory` which then initiates the planner `mpepc_plan` to find subgoals online using a cost function optimization. The subgoals are published back to `mpepc_trajectory` which then uses a graceful control law to drive to the subgoal.  The planning time horizon is further than the replan rate, so the subgoal is not achieved until it is placed on the final goal.  
