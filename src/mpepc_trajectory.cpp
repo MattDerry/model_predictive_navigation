@@ -34,6 +34,7 @@ using ::model_predictive_navigation::EgoGoal;
 #define RESULT_SUCCESS 2
 #define RESULT_CANCEL 3
 
+// Trajectory model parameters
 #define K_1 1.2           // 2
 #define K_2 3             // 8
 #define BETA 0.4          // 0.5
@@ -45,6 +46,7 @@ using ::model_predictive_navigation::EgoGoal;
 #define R_SPEED_LIMIT 0.5
 #define V_SPEED_LIMIT 0.3
 
+// Parameters to determine success
 #define GOAL_DIST_UPDATE_THRESH   0.05   // in meters
 #define GOAL_ANGLE_UPDATE_THRESH  0.1   // in radians
 
@@ -173,7 +175,7 @@ void receive_goals(const geometry_msgs::PoseStamped::ConstPtr& goal)
   }
   else
   {
-    ROS_INFO("[MPEPC] goal recieved but no odom or cost map");
+    ROS_DEBUG("[MPEPC] goal recieved but no odom or cost map");
     return;
   }
 
@@ -203,6 +205,7 @@ int main(int argc, char** argv)
   ros::NodeHandle n;
   nh = &n;
 
+  // Setup control law for trajectory generation
   ControlLawSettings settings;
   settings.m_K1 = K_1;
   settings.m_K2 = K_2;

@@ -345,6 +345,7 @@ double get_interpolated_point_potential(geometry_msgs::Point position)
   return a00 + a10*rotPoint.x + a01*rotPoint.y + a11*rotPoint.x*rotPoint.y;
 }
 
+// This function is used by the optimizer to score different trajectories
 double sim_trajectory(double r, double delta, double theta, double vMax, double time_horizon)
 {
   nav_msgs::Odometry sim_pose;
@@ -401,7 +402,7 @@ double sim_trajectory(double r, double delta, double theta, double vMax, double 
 
     if (minDist <= SAFETY_ZONE)
     {
-      ROS_INFO("Collision Detected");
+      // ROS_INFO("Collision Detected");
       collision_detected = true;
     }
 
@@ -449,6 +450,7 @@ double score_trajectory(const std::vector<double> &x, std::vector<double> &grad,
   return sim_trajectory(x[0], x[1], x[2], x[3], time_horizon);
 }
 
+// Use NLOPT to find the next subgoal for the trajectory generator
 void find_intermediate_goal_params(EgoGoal *next_step)
 {
   trajectory_count = 0;
@@ -539,6 +541,8 @@ void odom_cb(const nav_msgs::Odometry::ConstPtr& pose)
   bHasOdom = true;
 }
 
+// Place new list of occupied cells in to a tree structure that supports fast
+// nearest neighbor searching
 void nav_cb(const nav_msgs::GridCells::ConstPtr& grid_cells)
 {
   boost::mutex::scoped_lock lock(cost_map_mutex_);
