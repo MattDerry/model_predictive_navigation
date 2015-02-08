@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package>
+  <name>model_predictive_navigation</name>
+  <version>0.0.0</version>
+  <description>The model_predictive_navigation package</description>
+  <maintainer email="mderry@gmail.com">mderry</maintainer>
+  <license>GPLv3</license>
+  <!-- <url type="website">http://wiki.ros.org/model_predictive_navigation</url> -->
+  <author email="mderry@gmail.com">Matt Derry</author> -->
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>costmap_2d</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>navfn</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>roslib</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>nav_core</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+
+  <run_depend>message_runtime</run_depend>
+  <run_depend>costmap_2d</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>nav_msgs</run_depend>
+  <run_depend>navfn</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>roslib</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>nav_core</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+
+  <export>
+  </export>
+</package>
