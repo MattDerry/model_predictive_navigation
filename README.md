@@ -5,6 +5,7 @@ This work is an implementation of the model predictive equilibrium point control
 
 ## Dependencies
 1) ROS Indigo (http://wiki.ros.org/indigo/Installation/Ubuntu)
+
 2) ROS Turtlebot Simulator
 ```
 sudo apt-get install ros-indigo-turtlebot-simulator
