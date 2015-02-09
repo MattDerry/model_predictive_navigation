@@ -25,11 +25,13 @@ sudo apt-get install libflann-dev
 
 2) Build the workspace (planner works best if Release flag is used during build)
 ```
+cd ~/<workspace_name>
 catkin_make -DCMAKE_BUILD_TYPE=Release
 ```
 3) Source the workspace
 ```
-source ~/<workspace_name>/devel/setup.bash
+cd ~/<workspace_name>
+source devel/setup.bash
 ```
 
 ## To Run
