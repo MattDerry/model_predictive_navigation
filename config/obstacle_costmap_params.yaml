@@ -3,7 +3,6 @@ robot_base_frame: /base_footprint
 map_type: costmap
 plugins:
   - {name: obstacles, type: "costmap_2d::ObstacleLayer"}
-  - {name: inflated, type: "costmap_2d::InflationLayer"}
 
 update_frequency: 10.0
 publish_frequency: 5.0

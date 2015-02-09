@@ -49,7 +49,7 @@ using ::model_predictive_navigation::EgoGoal;
 // Trajectory Optimization Params
 #define TIME_HORIZON 5.0
 #define DELTA_SIM_TIME 0.2
-#define SAFETY_ZONE 0.125
+#define SAFETY_ZONE 0.225
 #define WAYPOINT_THRESH 1.75
 
 // Cost function params

@@ -6,7 +6,7 @@
   <node pkg="rviz" type="rviz" respawn="false" name="rviz" args="-d $(find model_predictive_navigation)/config/mpepc_nav.rviz" />
 
   <node pkg="model_predictive_navigation" type="costmap_server" name="costmap_server">
-    <rosparam file="$(find model_predictive_navigation)/config/mpepc_costmap_params.yaml" command="load" ns="costmap" />
+    <rosparam file="$(find model_predictive_navigation)/config/obstacle_costmap_params.yaml" command="load" ns="costmap" />
   </node>
   <node pkg="model_predictive_navigation" type="costmap_translator" name="costmap_translator" />
   <node pkg="model_predictive_navigation" type="mpepc_trajectory" name="mpepc_trajectory" output="screen"/>
