@@ -47,7 +47,7 @@ using ::model_predictive_navigation::EgoGoal;
 #define V_SPEED_LIMIT 0.3
 
 // Parameters to determine success
-#define GOAL_DIST_UPDATE_THRESH   0.05   // in meters
+#define GOAL_DIST_UPDATE_THRESH   0.15   // in meters
 #define GOAL_ANGLE_UPDATE_THRESH  0.1   // in radians
 
 #define GOAL_DIST_ID_THRESH   0.1       // in meters
