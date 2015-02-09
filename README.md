@@ -29,7 +29,7 @@ catkin_make -DCMAKE_BUILD_TYPE=Release
 ```
 3) Source the workspace
 ```
-source <workspace_name>/devel/setup.bash
+source ~/<workspace_name>/devel/setup.bash
 ```
 
 ## To Run
